@@ -1,6 +1,8 @@
 package com.recalllist.ui.main;
 
 
+import android.content.Context;
+
 import com.recalllist.domain.entity.Recall;
 
 import java.util.List;
@@ -13,6 +15,10 @@ public interface MainActivityContract {
 
     interface Model {
         void getMyRecallList(MainActivityPresenter mainActivityPresenter);
+
+        void updateRecall(Recall recall);
+
+        void deleteRecall(Recall recall);
     }
 
     interface View {
@@ -35,5 +41,11 @@ public interface MainActivityContract {
         void onGetMyRecallListError(String error);
 
         void onRecallClick(Recall recall);
+
+        void updateRecall(Recall recall);
+
+        void deleteRecall(Recall recall);
+
+        Context getContext();
     }
 }

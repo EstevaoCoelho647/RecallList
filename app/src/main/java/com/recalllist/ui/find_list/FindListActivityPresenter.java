@@ -1,14 +1,10 @@
 package com.recalllist.ui.find_list;
 
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.recalllist.domain.entity.Recall;
-import com.recalllist.util.ApplicationUtil;
 import com.recalllist.util.Constants;
-
-import java.util.List;
+import com.recalllist.util.SharedPreferencesUtil;
 
 /**
  * Created by estevao on 09/08/17.
@@ -37,8 +33,7 @@ public class FindListActivityPresenter implements FindListActivityContract.Prese
 
     @Override
     public void hashExists(String insertedHash) {
-        SharedPreferences sharedPreferences = ApplicationUtil.getContext().getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
-        SharedPreferences.Editor edit = sharedPreferences.edit();
+        SharedPreferences.Editor edit = SharedPreferencesUtil.getSharedPreferencesEdit();
         edit.putString(Constants.HASH_SHARED_PREFERENCES, insertedHash);
         edit.apply();
 

@@ -1,11 +1,10 @@
 package com.recalllist.ui.create_list;
 
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.recalllist.util.ApplicationUtil;
 import com.recalllist.util.Constants;
+import com.recalllist.util.SharedPreferencesUtil;
 
 import org.hashids.Hashids;
 
@@ -53,8 +52,7 @@ public class CreateListActivityPresenter implements CreateListActivityContract.P
 
     @Override
     public void onHashCreated(String hash) {
-        SharedPreferences sharedPreferences = ApplicationUtil.getContext().getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
-        SharedPreferences.Editor edit = sharedPreferences.edit();
+        SharedPreferences.Editor edit = SharedPreferencesUtil.getSharedPreferencesEdit();
         edit.putString(Constants.HASH_SHARED_PREFERENCES, hash);
         edit.apply();
 

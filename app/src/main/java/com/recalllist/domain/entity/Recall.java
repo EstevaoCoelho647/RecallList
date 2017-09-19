@@ -5,8 +5,26 @@ package com.recalllist.domain.entity;
  */
 
 public class Recall {
+    private String id;
     private String text;
-    private String date;
+    private Long date;
+    private String color;
+
+    public String getId() {
+        return id;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getText() {
         return text;
@@ -16,11 +34,11 @@ public class Recall {
         this.text = text;
     }
 
-    public String getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Long date) {
         this.date = date;
     }
 }

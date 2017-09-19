@@ -1,6 +1,8 @@
 package com.recalllist.ui.main;
 
 
+import android.content.Context;
+
 import com.recalllist.domain.entity.Recall;
 
 import java.util.List;
@@ -45,5 +47,21 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
     @Override
     public void onRecallClick(Recall recall) {
 
+    }
+
+    @Override
+    public void updateRecall(Recall recall) {
+        model.updateRecall(recall);
+    }
+
+    @Override
+    public void deleteRecall(Recall recall) {
+        if (recall.getId() != null)
+            model.deleteRecall(recall);
+    }
+
+    @Override
+    public Context getContext() {
+        return (MainActivity) view;
     }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_login">
@@ -14,6 +15,7 @@
         android:layout_marginRight="64dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="64dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Digite o código da lista que deseja acessar"
         android:textColor="#fff"
@@ -59,10 +61,78 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <EditText
-            android:id="@+id/editHash"
-            android:layout_width="match_parent"
+            android:id="@+id/edt1"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
-            android:minEms="6" />
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:maxLength="1"
+            android:shadowColor="@color/md_white_1000"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textColorLink="@color/md_white_1000" />
+
+        <EditText
+            android:id="@+id/edt2"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textColorLink="@color/md_white_1000" />
+
+        <EditText
+            android:id="@+id/edt3"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textColorLink="@color/md_white_1000" />
+
+        <EditText
+            android:id="@+id/edt4"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textColorLink="@color/md_white_1000" />
+
+        <EditText
+            android:id="@+id/edt5"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textColorLink="@color/md_white_1000" />
+
+        <EditText
+            android:id="@+id/edt6"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_white_1000"
+            android:textColorHint="@color/md_white_1000"
+            android:textColorLink="@color/md_white_1000" />
     </LinearLayout>
 
     <TextView
@@ -72,27 +142,24 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:visibility="gone"
+        android:fontFamily="casual"
         android:text="Código inválido"
         android:textColor="@color/colorAccent"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
-        android:id="@+id/buttonContinue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Continuar"
+        android:layout_marginTop="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInvalidCode" />
 
 </android.support.constraint.ConstraintLayout>
