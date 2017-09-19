@@ -2,6 +2,7 @@ package com.recalllist;
 
 import android.app.Application;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.recalllist.util.ApplicationUtil;
 
 /**
@@ -13,5 +14,7 @@ public class RecallListApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ApplicationUtil.setContext(getApplicationContext());
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
     }
 }
