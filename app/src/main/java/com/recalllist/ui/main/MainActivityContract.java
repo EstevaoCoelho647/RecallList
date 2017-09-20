@@ -29,6 +29,10 @@ public interface MainActivityContract {
         void onGetMyRecallListSuccess(List<Recall> recallList);
 
         void onGetMyRecallListError(String error);
+
+        void onRecallDeleted();
+
+        void onRecallUpdated();
     }
 
     interface Presenter {
@@ -47,5 +51,9 @@ public interface MainActivityContract {
         void deleteRecall(Recall recall);
 
         Context getContext();
+
+        void onRecallDeleted();
+
+        void onRecallUpdated();
     }
 }

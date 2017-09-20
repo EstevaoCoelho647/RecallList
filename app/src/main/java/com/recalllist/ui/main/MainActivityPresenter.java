@@ -64,4 +64,14 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
     public Context getContext() {
         return (MainActivity) view;
     }
+
+    @Override
+    public void onRecallDeleted() {
+        view.onRecallDeleted();
+    }
+
+    @Override
+    public void onRecallUpdated() {
+        view.onRecallUpdated();
+    }
 }

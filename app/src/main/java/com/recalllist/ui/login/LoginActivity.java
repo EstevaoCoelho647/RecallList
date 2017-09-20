@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, FindListActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         mButtonNew.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, CreateListActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

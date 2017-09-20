@@ -28,9 +28,11 @@ public class SplashActivity extends AppCompatActivity {
         if (SharedPreferencesUtil.getSharedPreferences().getString(Constants.HASH_SHARED_PREFERENCES, null) != null) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+            finish();
         } else {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }
